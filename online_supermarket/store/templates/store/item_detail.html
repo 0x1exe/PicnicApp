@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+<div class="item-detail">
+    <h2 class="item-name">{{ item.name }}</h2>
+    <div class="item-image-container">
+        <img src="{{ item.image.url }}" alt="{{ item.name }}" class="item-image">
+    </div>
+    <p class="image-description">{{ item.image_description }}</p>
+    <p class="item-description">{{ item.description }}</p>
+    {% if item.price %}
+        <p class="price">Price: <span class="price-amount">${{ item.price }}</span></p>
+    {% endif %}
+    <a href="#" class="buy-button">Buy Now</a>
+</div>
+{% endblock content %}

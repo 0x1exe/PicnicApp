@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% load static %}
+<div class="download-section">
+    <div class="image">
+        <img src="{% static 'images/picnic_probieren.png' %}" alt="Download Illustration">
+    </div>
+    <div class="download-info">
+        <h2>Planning a picnic?</h2>
+        <div class="download-buttons">
+            <a href="https://www.apple.com/app-store/" target="_blank">
+                <div class = 'app-store'>
+                <img src="{% static 'images/app_store_resized.png' %}" alt="Download on the App Store">
+                </div>
+            </a>
+            <a href="https://play.google.com/store" target="_blank">
+                <img src="{% static 'images/play_store_resized.png' %}" alt="Get it on Google Play">
+            </a>
+        </div>
+        <p>🎁 Now with <strong>gifts</strong> with your first order!</p>
+    </div>
+</div>
+{% endblock %}

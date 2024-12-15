@@ -1,0 +1,27 @@
+
+{% extends 'base.html' %}
+{% block content %}  
+    {% load static %}
+    <main>
+        <section class="intro">
+            <h1><strong>Supermarket</strong> on wheels</h1>
+            <ul>
+                <li>Always <span>low prices</span></li>
+                <li>Always <span>free delivery</span></li>
+                <li>Always <span>super fresh</span></li>
+            </ul>
+            <div class="app-links">
+                <img src="{% static 'images/appstore.jpg' %}" alt="App Store">
+                <img src="{% static 'images/googleplay.png' %}" alt="Google Play">
+            </div>
+        </section>
+
+        <section class="cards">
+            <div class="card">
+                <h3>Monday</h3>
+                <img class="dish-img" src="{% static 'images/meal_photo.png' %}" alt="Dish">
+            </div>
+        </section>
+    </main>
+{% endblock content %}
+

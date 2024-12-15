@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="header">
+    <h1>Hey, how can we help you?</h1>
+    <div class="search-bar">
+        <form method="get">
+            <input type="text" name="q" placeholder="Find something awesome!" value="{{ request.GET.q }}">
+            <button type="submit">Search</button>
+        </form>
+    </div>
+</div>
+
+<div class="catalog">
+    <h2>Catalog</h2>
+    <div class="catalog-items">
+        {% for item in items %}
+            <div class="catalog-item">
+                <a href="{% url 'item_detail' item.pk %}">
+                    <img src="{{ item.image.url }}" alt="{{ item.name }}">
+                    <p>{{ item.name }}</p>
+                </a>
+            </div>
+            {% empty %}
+                <p>No items available.</p>
+            {% endfor %}
+    </div>
+</div>
+{% endblock content %}
+    
+    
